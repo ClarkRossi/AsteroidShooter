@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap = "http://phonegap.com/ns/1.0"
+	id = "com.flccnewmedia.SSTGApp"
+	verionCode = "1"
+	version = "0.0.1">
+	
+	<name>Space Shooter Thingy Game</name>
+	
+	<description>Words</description>
+	
+	<author href="http://newmedia.csc.flcc.edu" email="clarkr9514@gmail.com">Clark Rossi</author>
+	
+	<platform name="android" />
+	
+	<preference name="orentation" value="portrait" />
+	<preference name="fullscreen" value="true" />
+	<preference name="webviewbounce" value="false" />
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="disallowOverscroll" value="true" />
+	
+	<icon src="icon.png" />
+</widget>

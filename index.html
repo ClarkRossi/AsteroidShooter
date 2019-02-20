@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Space Shooter Game, index
+	Clark Rossi
+	Game and Moble App Dev
+	9/20/16
+--><head>
+    <meta charset="UTF-8">	
+    <title></title>
+    <h1></h1>
+</head>
+
+<script src="phonegap.js"></script>
+
+<meta name="viewport" content="width=device-width, inital-scale=1, maximum-scale=1, user-scalable=no" />
+<link href="menusStyleSheet.css" rel="stylesheet" type="text/css">
+
+<body id="backgroundIMG">
+	<script>
+		//Opens gamePanel page
+		function gamePanelLink()
+		{
+			window.location.href = "gamePanel.html";
+		}
+		
+		//Quits out of game
+		function quit()
+		{
+			navigator.app.exitApp();
+		}
+    </script>
+    <!--Banner for title screen-->
+    <img src="assets/mainMenuTitle.png" id="bannerIMG"/>
+    
+    <!--Container to hold and position menu buttons-->
+    <div id="menuContainer">
+    	<img src="assets/startButton.png" id="startButton" onClick="gamePanelLink()"/>
+    	<img src="assets/quitButton.png" id="quitButton" onClick="quit()"/> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Space Shooter Game, gamePanel
+	Clark Rossi
+	Game and Moble App Dev
+	9/20/16
+--><head>
+    <meta charset="UTF-8">	
+    <title></title>
+    <h1></h1>
+	<script>
+		//Variables that both javaScript files use.
+		var score = 0;
+		var asteroidArray = [];
+		var enemyShipArray = [];
+		var playerHealth = 100;
+	
+        //Opens the pause menu
+        function pause()
+        {
+            window.location.href = "pauseMenu.html";
+        }	
+		
+		//Adds a touchstart eventListener to the gamePanel buttons
+		function listen()
+		{
+			pauseButton.addEventListener("touchstart", pause, false);
+			attackButton.addEventListener("touchstart", shipAttack, false);
+			leftButtonIMG.addEventListener("touchstart", shipLeft, false);
+			leftButtonIMG.addEventListener("touchstart", shipStatus, false);
+			rightButtonIMG.addEventListener("touchstart", shipRight, false);
+		}
+		
+		//Sets the default score and health once page loads
+		function defaultUI()
+		{
+			document.getElementById("scoreBoard").innerHTML += "Score: 0";
+			document.getElementById("healthDisplay").innerHTML += "Health: 100%"; 
+		}
+    </script>
+</head>
+
+<!--Phonegap plugin-->
+<script src="phonegap.js"></script>
+
+<!--Links to the javascript for the player ship-->
+<script language="Javascript" src="scripts/shipControl.js"> </script>
+
+<!--Links to the javascript for the NPC's-->
+<script language="Javascript" src="scripts/enemiesAndAsteroids.js"> </script>
+
+<meta name="viewport" content="width=device-width, inital-scale=1, maximum-scale=1, user-scalable=no" />
+<link href="gameStyleSheet.css" rel="stylesheet" type="text/css">
+
+<!--When the body loads causes asteroids to spawn and buttons to look for input-->
+<body id="backgroundIMG" onLoad="initalize(), listen(), defaultUI()" >
+
+    <!--Pause button-->
+    <input type="image" src="assets/pauseButton.png" id="pauseButton"/> 
+	
+	<!--Displays the score and health-->
+	<div id="infoBoard">
+		<div id="scoreBoard"></div>
+		<div id="healthDisplay"></div>
+	</div>
+	
+	<!--For debuging-->
+    <div id="qa"></div>
+	
+	<!--Area for NPC's to spawn-->
+	<div id="npcSpawner"></div>
+	
+    <!--Area where laser will spawn-->
+    <div id="laserSpawner"></div>
+    
+	<!--Player ship-->
+	<img src="assets/playerShip.png" id="playerShip"/>
+	
+	<!--Footer that holds movement and attack buttons-->
+	<div id="footerContainer">
+	
+		<!--Attack button-->
+		<input type="image" src="assets/attackButton.png" id="attackButton"/>
+		
+		<!--Movement buttons-->
+		<div id="moveButtonContainer">
+			  <input type="image" src="assets/leftButton.png" id="leftButtonIMG"/> 
+			  <input type="image" src="assets/rightButton.png" id="rightButtonIMG"/>
+		</div>
+	</div>
+</body>
+</html>

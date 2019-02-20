@@ -1,0 +1,83 @@
+#qa{
+	position:absolute;
+	width:300px;
+	background-color:white;
+	height:300px;
+	overflow:auto;
+	top:100px;
+	font-size:25px;
+	display: none;
+}
+#backgroundIMG{
+	z-index: 0;
+	background-size: 100%;
+	background-image: url(assets/SpaceBackground.jpg);
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	overflow: hidden;
+}
+#pauseButton{
+	width: 20%;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+#infoBoard{
+	float: right;
+	width: 100px;
+	height: 50px;
+}
+#scoreBoard{
+	z-index: 2;
+	color: white;
+	top: 0px;
+}
+#healthDisplay{
+	z-index: 2;
+	color: white;
+	bottom: 0px;
+}
+.laser{
+	z-index: 1;
+	width:10px;
+	height:20px;
+}
+.asteroid{
+	z-index: 1;
+}
+.enemyShip{
+	z-index: 1;
+}
+#playerShip{
+	left: 20px;
+	width: 70px;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	z-index: 2;
+}
+#footerContainer{
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+}
+#attackButton{
+	width: 20%;
+	float: left;
+}
+#moveButtonContainer{
+	width: 50%;
+	float: right;
+}
+#leftButtonIMG{
+	width: 50%;
+	float: left;
+}
+#rightButtonIMG{
+	width: 50%;
+	float: right;
+}

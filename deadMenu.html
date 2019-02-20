@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Space Shooter Game, deadMenu
+	Clark Rossi
+	Game and Moble App Dev
+	9/20/16
+-->
+<head>
+	<!--Links to menuStyleSheet-->
+	<link href="menusStyleSheet.css" rel="stylesheet" type="text/css">
+    
+	<script>
+    {
+		//Goes to gamePanel page
+		function retryGame()
+		{
+			window.location.href = "gamePanel.html";			
+		}
+		
+		//Goes to index page
+		function menu()
+		{
+			window.location.href = "index.html";			
+		}
+		
+		//Quits the game
+		function quit()
+		{
+			navigator.app.exitApp();
+		}	
+    }
+    </script>
+        
+    <!--Phonegap plugin-->
+    <script src="phonegap.js"></script>
+</head>
+<body id="backgroundIMG">
+	<!--Banner for deadMenu-->
+	<img src="assets/deadMenuTitle.png" id="bannerIMG"/>
+
+	<!--Contains menu buttons-->
+	<div id="deadMenuContainer">
+    	<img src="assets/retryButton.png" id="retryButton" onClick="retryGame()"/>
+        <img src="assets/menuButton.png" id="menuButton" onClick="menu()"/>
+    	<img src="assets/quitButton.png" id="quitButton" onClick="quit()"/> 
+	</div>        
+</body>
+</html>

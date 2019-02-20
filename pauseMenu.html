@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Space Shooter Game, pauseMenu
+	Clark Rossi
+	Game and Moble App Dev
+	9/20/16
+-->
+<head>
+    <meta charset="UTF-8">	
+	<title></title>
+	<h1></h1>
+    <script>
+		//Goes to gamePanel page
+		function contineToGame()
+		{
+			window.location.href = "gamePanel.html";			
+		}
+		
+		//Goes to index page
+		function menu()
+		{
+			window.location.href = "index.html";			
+		}
+		
+		//Quits the game
+		function quit()
+		{
+			navigator.app.exitApp();
+		}
+	</script>
+    
+    <!--Phonegap plugin-->
+    <script src="phonegap.js"></script>
+    
+    <meta name="viewport" content="width=device-width, inital-scale=1, maximum-scale=1, user-scalable=no" />
+	<link href="menusStyleSheet.css" rel="stylesheet" type="text/css">
+</head>
+<body id="backgroundIMG">
+
+	<!--Container for the buttons within the page-->
+	<div id="pauseMenuContainer">
+    	<img src="assets/continueButton.png" id="continueButton" onClick="contineToGame()"/>
+        <img src="assets/menuButton.png" id="menuButton" onClick="menu()"/>
+    	<img src="assets/quitButton.png" id="quitButton" onClick="quit()"/> 
+    </div>
+</body>
+</html>
